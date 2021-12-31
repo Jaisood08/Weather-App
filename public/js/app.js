@@ -1,12 +1,8 @@
-
-console.log("client side js")
-
-
 const chuck =()=>{
 
     const location = document.getElementById('lname').value
 
-    console.log("Location = ", location)
+    // console.log("Location = ", location)
 
     if(location === "")
     {
@@ -17,10 +13,10 @@ const chuck =()=>{
     {
         resp.json().then((data)=>
         {
-            console.log(data)
+            // console.log(data)
             if(data.error)
             {
-                console.log(data)
+                // console.log(data)
                 return alert(data.error);
             }
 
@@ -34,7 +30,7 @@ const chuck =()=>{
                     {
                         if(result.error)
                         {
-                            console.log(result)
+                            // console.log(result)
                             return alert(result.error);
                         }
 
@@ -46,7 +42,7 @@ const chuck =()=>{
                             ul.appendChild(l);
                         }
                         document.getElementById("results").appendChild(ul);
-                        console.log("Data : ",result)
+                        // console.log("Data : ",result)
                     });
                 });
             });
